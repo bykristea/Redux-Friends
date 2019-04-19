@@ -1,32 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import happy from '../components/img/happy.png';
-import styled from 'styled-components';
-
-export const FriendImage = styled.img`
-    
-`;
-
-export const FriendLayout = styled.div`
-    display: flex;
-    flex-direction: row;
-    ${'' /* width: 50%; */}
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 auto;
-`;
+import React from 'react'
 
 const Friend = (props) => {
-    return(
-        <Link to={`/friend/${props.friend.id}`}>
-            <FriendLayout>
-                <FriendImage src={happy} alt='happy'/>
-                <h1>{props.friend.name}</h1>
-                <p>{props.friend.age}</p>
-                <p>{props.friend.email}</p>
-            </FriendLayout>
-        </Link>
-    )
+    console.log(props.friend)
+  return (
+      <div>
+    <div>
+        <h1>{props.friend.name}</h1>
+    </div>
+    <div>
+        <p>Age: {props.friend.age}</p>
+        <p>Email: {props.friend.email}</p>
+    </div>
+    </div>
+  )
 }
-
 export default Friend;
