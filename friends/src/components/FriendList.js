@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import Friend from './Friend'
-import {connect} from 'react-redux'
+import React, { Component } from 'react';
+import Friend from './Friend';
+import AddForm from './AddForm'
+import {connect} from 'react-redux';
 import {getfriend} from '../actions/index';
 class FriendList extends Component {
     componentDidMount(){
@@ -12,13 +13,14 @@ class FriendList extends Component {
     return (
       <div>
        {this.props.friend.map( (friend, id) =>
-        <Friend key ={id}friend ={friend}/>)}
+        <Friend key ={id} data ={friend}/>)}
+        <AddForm />
       </div>
     )
   }
 }
 const mapStateToProps = state =>{
-    console.log(state.friend)
+    
     return{
         friend: state.friend
     }

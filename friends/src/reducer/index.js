@@ -3,7 +3,10 @@ import {FETCH_FRIENDS_START,
     FETCH_FRIENDS_FAILURE,
     LOGIN_SUCCESS,
     LOGIN_FETCHING,
-    LOGIN_FAILURE
+    LOGIN_FAILURE, 
+    ADD_FRIENDS_START,
+    ADD_FRIENDS_SUCCESS,
+    ADD_FRIENDS_FAILURE
 } from '../actions/index.js';
 
 const initialstate ={
@@ -56,6 +59,25 @@ export const friendReducer = (state = initialstate, action) =>{
         case FETCH_FRIENDS_FAILURE:
         default:
           return state;
+
+          case ADD_FRIENDS_START:
+          return{
+            ...state,
+            err: '',
+            fetchingFriends: true
+          };
+          case ADD_FRIENDS_SUCCESS:
+          return {
+            ...state,
+            isFetching: false,
+            friend: action.payload
+          };
+        case ADD_FRIENDS_FAILURE:
+          return {
+            ...state,
+            isFetching: false,
+            error: action.payload
+          };
 
           
     }

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {friendReducer} from './reducer';
+import {friendReducer} from './reducer/index.js'
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import thunk from 'redux-thunk';

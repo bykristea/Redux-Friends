@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import FriendList from './components/FriendList';
-
 import './App.css';
 import LoginPage from './components/loginpage';
 import {Route, } from 'react-router-dom';
@@ -15,9 +14,9 @@ class App extends Component {
 
         </div>
       <div>
+        
         <PrivateRoute path = "/FriendList" component = {FriendList} />
-        <PrivateRoute path = "/AddFriend" component = {AddFriend} />
-
+        
       </div>
       </div>
     );

@@ -67,10 +67,10 @@ export const getfriend = () => dispatch => {
     
 }
 
-export const addFriend = item => dispatch => {
+export const addFriend = newFriend => dispatch => {
     dispatch({ type: ADD_FRIENDS_START });
     axios
-      .post('http://localhost:5000/api/friends', item)
+      .post('http://localhost:5000/api/friends', newFriend)
       .then(response => {
         console.log(response);
         dispatch({

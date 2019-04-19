@@ -1,15 +1,15 @@
 import React from 'react'
 
 const Friend = (props) => {
-    console.log(props.friend)
+   
   return (
       <div>
     <div>
-        <h1>{props.friend.name}</h1>
+        <h1>{props.data.name}</h1>
     </div>
     <div>
-        <p>Age: {props.friend.age}</p>
-        <p>Email: {props.friend.email}</p>
+        <p>Age: {props.data.age}</p>
+        <p>Email: {props.data.email}</p>
     </div>
     </div>
   )
