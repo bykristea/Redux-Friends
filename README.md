@@ -1,4 +1,4 @@
-# Redux Friends
+# Redux Friends--Kristea Gamel
 
 Topics:
 
